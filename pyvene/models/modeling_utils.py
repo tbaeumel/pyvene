@@ -23,7 +23,12 @@ class LambdaIntervention(torch.nn.Module):
 
 def get_internal_model_type(model):
     """Return the model type."""
-    return type(model)
+    # return type(model)
+    # Correct minor type mismatches
+    for known_type in type_to_dimension_mapping:
+        if isinstance(model, known_type):
+            return known_type
+    raise ValueError(f"Unknown model type: {type(model)}")
 
 
 def is_stateless(model):
