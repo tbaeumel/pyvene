@@ -117,11 +117,11 @@ def getattr_for_torch_module(model, parameter_name):
 def get_dimension_by_component(model_type, model_config, component) -> int:
     """Based on the representation, get the aligning dimension size."""
 
-    print("DEBUG: model_type =", model_type)
-    print("DEBUG: model_type full =", model_type.__module__, model_type.__name__)
-    print("DEBUG: Available keys in type_to_dimension_mapping:")
-    for key in type_to_dimension_mapping:
-        print("  -", key, key.__module__, key.__name__)
+    # print("DEBUG: model_type =", model_type)
+    # print("DEBUG: model_type full =", model_type.__module__, model_type.__name__)
+    # print("DEBUG: Available keys in type_to_dimension_mapping:")
+    # for key in type_to_dimension_mapping:
+    #     print("  -", key, key.__module__, key.__name__)
 
     if component not in type_to_dimension_mapping[model_type]:
         return None
