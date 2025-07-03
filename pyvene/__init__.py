@@ -53,3 +53,4 @@ from .models.llama.modelings_intervenable_llama import create_llama
 from .models.mlp.modelings_intervenable_mlp import create_mlp_classifier
 from .models.backpack_gpt2.modelings_intervenable_backpack_gpt2 import create_backpack_gpt2
 from .models.olmo.modelings_intervenable_olmo import create_olmo
+from .models.olmo2.modelings_intervenable_olmo2 import create_olmo2
